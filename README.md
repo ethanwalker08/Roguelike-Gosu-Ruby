@@ -29,3 +29,16 @@ If on windows:
 # How to play the Game
 
 To run the game simply run the init.rb file located in the root of this directory! Have fun!
+
+# Controls
+Movement-
+H- Move up
+L- Move down
+J- Move right
+K- Move left
+(or use arrow keys)
+
+Interaction- 
+F- Pick up item
+R- Rest
+S- Check inventory
