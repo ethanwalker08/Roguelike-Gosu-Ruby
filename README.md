@@ -53,8 +53,3 @@ F- Pick up item
 R- Rest
 
 S- Check inventory
-=======
-# Controls
-
-Arrow keys to move
->>>>>>> Stashed changes
