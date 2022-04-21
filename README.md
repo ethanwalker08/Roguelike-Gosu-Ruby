@@ -30,6 +30,7 @@ If on windows:
 
 To run the game simply run the init.rb file located in the root of this directory! Have fun!
 
+<<<<<<< Updated upstream
 	ruby init.rb
 
 ## Controls
@@ -52,3 +53,8 @@ F- Pick up item
 R- Rest
 
 S- Check inventory
+=======
+# Controls
+
+Arrow keys to move
+>>>>>>> Stashed changes

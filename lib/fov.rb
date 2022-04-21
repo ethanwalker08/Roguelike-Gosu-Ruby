@@ -1,4 +1,4 @@
-#Copied from: http://www.roguebasin.com/index.php?title=Ruby_precise_permissive_FOV_implementation
+#Source: http://www.roguebasin.com/index.php?title=Ruby_precise_permissive_FOV_implementation
 
 module PermissiveFieldOfView
     # Determines which co-ordinates on a 2D grid are visible

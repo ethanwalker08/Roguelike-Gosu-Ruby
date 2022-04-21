@@ -5,23 +5,35 @@ class ButtonHandler
       case id
         when Gosu::Button::KbEscape
           window.close
-        when Gosu::Button::KbLeft
+        when id = Gosu::Button::KbJ
           $player.move_or_attack(-1,0)
           $map_obj.do_fov($player_x, $player_y, 5)
-        when Gosu::Button::KbRight
+        when id = Gosu::Button::KbK
           $player.move_or_attack(1, 0)
           $map_obj.do_fov($player_x, $player_y, 5)
-        when Gosu::Button::KbUp
+        when id = Gosu::Button::KbH
           $player.move_or_attack(0, -1)
           $map_obj.do_fov($player_x, $player_y, 5)
-        when Gosu::Button::KbDown
+        when id = Gosu::Button::KbL
           $player.move_or_attack(0, 1)
           $map_obj.do_fov($player_x, $player_y, 5)
-        when Gosu::Button::Kb5
+        when id = Gosu::Button::KbLeft
+          $player.move_or_attack(-1,0)
+          $map_obj.do_fov($player_x, $player_y, 5)
+        when id = Gosu::Button::KbRight
+          $player.move_or_attack(1, 0)
+          $map_obj.do_fov($player_x, $player_y, 5)
+        when id = Gosu::Button::KbUp
+          $player.move_or_attack(0, -1)
+          $map_obj.do_fov($player_x, $player_y, 5)
+        when id = Gosu::Button::KbDown
+          $player.move_or_attack(0, 1)
+          $map_obj.do_fov($player_x, $player_y, 5)
+        when Gosu::Button::KbR
           $player.rest
-        when Gosu::Button::KbI
+        when Gosu::Button::KbS
           $game_state = ButtonHandler.toggle
-        when Gosu::Button::KbG
+        when Gosu::Button::KbF
           $items.each do |i|
             if i.x == $player.x && i.y == $player.y
               i.pick_up
@@ -59,13 +71,13 @@ class ButtonHandler
   def self.button_handle(id)
     if id == Gosu::Button::KbEscape
       toggle
-    elsif id == Gosu::Button::KbLeft
+    elsif id = Gosu::Button::KbJ || id == Gosu::Button::KbLeft
       move(:left)
-    elsif id == Gosu::Button::KbRight
+    elsif id = Gosu::Button::KbK || id == Gosu::Button::KbRight
       move(:right)
-    elsif id == Gosu::Button::KbUp
+    elsif id = Gosu::Button::KbH || id == Gosu::Button::KbUp
       move(:up)
-    elsif id == Gosu::Button::KbDown
+    elsif id = Gosu::Button::KbL || id == Gosu::Button::KbDown
       move(:down)
     else
       index = ButtonHandler.convert_button(id) - 'a'.ord
