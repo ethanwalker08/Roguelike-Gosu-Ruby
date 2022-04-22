@@ -39,9 +39,9 @@ H- Move up
 
 L- Move down
 
-J- Move right
+J- Move left
 
-K- Move left
+K- Move right
 
 (or use arrow keys)
 
@@ -52,3 +52,5 @@ F- Pick up item
 R- Rest
 
 S- Check inventory
+
+esc- Close game

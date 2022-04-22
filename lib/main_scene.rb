@@ -1,8 +1,8 @@
 class GameWindow < Gosu::Window
 	def initialize
-		$window_width = 1280
-		$window_height = 1020
-		super($window_width, $window_height, false)
+		$window_width = 1440
+		$window_height = 1080
+		super($window_width, $window_height, true)
 
 		self.caption = "Roguelike"
 
@@ -11,7 +11,7 @@ class GameWindow < Gosu::Window
 
 		@room_max_size = 10
 		@room_min_size = 6
-		@max_rooms = 15
+		@max_rooms = 5
 
 		$first_room = true
 		$player_x = $player_y = 0
@@ -37,6 +37,7 @@ class GameWindow < Gosu::Window
 	end
 
 	def update
+		
 	end
 
 	def draw_hp_bar(x, y, w, h, color1, color2, z=2, object)
