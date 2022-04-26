@@ -3,7 +3,7 @@ class ButtonHandler
   def self.button_down(id, window)
     if $game_state == 'playing'
       case id
-        when Gosu::Button::KbEscape
+        when id = Gosu::Button::KbEscape
           window.close
         when id = Gosu::Button::KbJ
           $player.move_or_attack(-1,0)

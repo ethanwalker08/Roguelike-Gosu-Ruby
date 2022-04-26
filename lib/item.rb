@@ -10,7 +10,7 @@ class Item < GameObject
 	end
 
 	def pick_up
-		if $bag.length >= 26
+		if $bag.length >= 4
 			Messager.message("Inventory is full!")
 		else
 			$bag << self

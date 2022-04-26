@@ -43,13 +43,15 @@ class Entity < GameObject
 
 	def attack(target)
 		damage = (rand(5)+ @strength) - (rand(3) + target.defense)
-
+		
 		if damage > 0
 			Messager.message(self.name + ' attacks ' + target.name + ' for ' + damage.to_s + ' damage')
 			target.take_damage(damage)
 		else
 			Messager.message(name + ' deals no damage!')
 		end
+		puts "strength : #{@strength}"
+		puts "defense #{target.defense}" 
 	end
 
 	def distance_to(other)

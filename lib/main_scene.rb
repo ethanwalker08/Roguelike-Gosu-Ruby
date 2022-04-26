@@ -2,7 +2,7 @@ class GameWindow < Gosu::Window
 	def initialize
 		$window_width = 1440
 		$window_height = 1080
-		super($window_width, $window_height, true)
+		super($window_width, $window_height, false)
 
 		self.caption = "Roguelike"
 
@@ -66,7 +66,7 @@ class GameWindow < Gosu::Window
 		$map_obj.set_tile($player_x, $player_y, 'player')
 		$map_obj.do_fov($player_x, $player_y, 5)
 
-		$player = Player.new(self, $player_x, $player_y, 'player', 20, 5, 500)
+		$player = Player.new(self, $player_x, $player_y, 'player', 20, 5, 3)
 
 		$camera_x = [[($player.x * 31 - 5) - $window_width/2, 0].max, $window_width * 31 - 5].min
 		$camera_y = [[($player.y * 31 - 5) - $window_height/2, 0].max, $window_height * 31 - 5].min

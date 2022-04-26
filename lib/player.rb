@@ -53,4 +53,5 @@ class Player < Entity
 
 		Messager.message("Player is resting")
 	end
+
 end

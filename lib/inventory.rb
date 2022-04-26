@@ -5,7 +5,7 @@ class Inventory
 
     def draw
         y = 50
-        alphabet = ('a'..'z').to_a
+        alphabet = ('a'..'d').to_a
         a_index = 0
 
         $font.draw("- - - Inventory - - -", $window_width/2 - 150, 0, 1, 2.0, 2.0, $white)
