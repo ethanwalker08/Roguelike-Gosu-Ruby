@@ -50,8 +50,6 @@ class Entity < GameObject
 		else
 			Messager.message(name + ' deals no damage!')
 		end
-		puts "strength : #{@strength}"
-		puts "defense #{target.defense}" 
 	end
 
 	def distance_to(other)

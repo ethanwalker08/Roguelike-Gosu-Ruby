@@ -11,7 +11,7 @@ class GameWindow < Gosu::Window
 
 		@room_max_size = 10
 		@room_min_size = 6
-		@max_rooms = 5
+		@max_rooms = 10
 
 		$first_room = true
 		$player_x = $player_y = 0

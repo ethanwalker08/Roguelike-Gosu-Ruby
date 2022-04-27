@@ -71,20 +71,21 @@ class ButtonHandler
   def self.button_handle(id)
     if id == Gosu::Button::KbEscape
       toggle
-    elsif id = Gosu::Button::KbJ || id == Gosu::Button::KbLeft
-      move(:left)
-    elsif id = Gosu::Button::KbK || id == Gosu::Button::KbRight
-      move(:right)
-    elsif id = Gosu::Button::KbH || id == Gosu::Button::KbUp
-      move(:up)
-    elsif id = Gosu::Button::KbL || id == Gosu::Button::KbDown
-      move(:down)
-    else
-      index = ButtonHandler.convert_button(id) - 'a'.ord
-      if $bag[index] != nil
-        puts 'test'
-        $bag[index].use
-      end
+    elsif id == Gosu::Button::KbA
+      index = 0
+      $bag[index].use
+    elsif id == Gosu::Button::KbB
+      index = 1
+      $bag[index].use
+    elsif id == Gosu::Button::KbC
+      index = 2
+      $bag[index].use
+    elsif id == Gosu::Button::KbD
+      index = 3
+      $bag[index].use
+    elsif id == Gosu::Button::KbF
+      index = 4
+      $bag[index].use
     end
   end
 
