@@ -4,14 +4,18 @@ class Item < GameObject
 		if name == 'healing potion'
 			@healing_amount = 4
 			@image = $image_tiles[40]
+		
+		elsif name == 'Sword of finality'
+			@image = @image_tiles[62]
 		end
-
 		@visible = false
 	end
 
 	def pick_up
 		if $bag.length >= 5
 			Messager.message("Inventory is full!")
+		elsif name == 'Sword of finality'
+			GameWindow.end_game
 		else
 			$bag << self
 			$items.delete(self)
