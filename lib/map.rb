@@ -67,10 +67,10 @@ class Map
 				elsif choice <= 20 && choice > 10
 					item = Scroll.new(@window, x, y, 'confuse scroll', false)
 					$items << item
+				elsif choice <= 10 && choice > 0
+					item = Item.new(@window, x, y, 'Sword of finality', false)
+					$items << item
 				end
-			elsif choice <= 40 && choice > 20
-				item = Item.new(@window, x, y, 'Sword of finality', false)
-				$items << item
 			end
 		end
 
@@ -84,9 +84,6 @@ class Map
 		end
 	end
 
-	def explored(x,y)
-		#set tile to explored
-	end
 
 	def blocked?(x, y)
 		if $map[x][y] == Tiles::Wall || $map[x][y] == Tiles::Unlit_Wall
@@ -100,7 +97,7 @@ class Map
 
 	def light(x,y)
 		$items.each do |item|
-			if item.x == x && item.y == y
+			if item.x == x && item.y == y #|| $map[x][y] == Tiles::Unlit_Wall #UNCOMMENT THE || FOR THE IF STATEMENT IF YOU WANT TO SEE ALL ITEMS FOR DEBUGGING
 				item.visible = true
 			end
 		end

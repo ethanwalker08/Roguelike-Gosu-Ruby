@@ -97,9 +97,4 @@ class GameWindow < Gosu::Window
 	def button_down(id)
         ButtonHandler.button_down(id, self)
 	end
-
-	def end_game
-		window.close
-		puts 'you have won the game! Congratulations'
-	end
 end

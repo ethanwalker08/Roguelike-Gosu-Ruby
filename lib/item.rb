@@ -6,7 +6,7 @@ class Item < GameObject
 			@image = $image_tiles[40]
 		
 		elsif name == 'Sword of finality'
-			@image = @image_tiles[62]
+		 	@image = $image_tiles[62]
 		end
 		@visible = false
 	end
@@ -15,7 +15,7 @@ class Item < GameObject
 		if $bag.length >= 5
 			Messager.message("Inventory is full!")
 		elsif name == 'Sword of finality'
-			GameWindow.end_game
+			self.end_game
 		else
 			$bag << self
 			$items.delete(self)
@@ -48,6 +48,12 @@ class Item < GameObject
 			@image.draw(@x * 31 - 5, @y * 31 - 5, 1, 1, 1)
 		end
 	end
+	def end_game
+		window.close
+		puts ''
+		puts''
+		puts 'YOU HAVE WON THE GAME! Congratulations... NERD'
+	end
 end
 
 class Scroll < Item
@@ -76,7 +82,7 @@ class Scroll < Item
 				end
 			elsif name == 'confuse scroll'
 				monster = $player.closest_monster(@c_range)
-				r_num = random(100)
+				r_num = rand(100)
 				if monster == nil
 					Messager.message("No enemy close enough to target!")
 				else
