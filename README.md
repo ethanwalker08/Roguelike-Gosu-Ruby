@@ -57,6 +57,9 @@ esc- Close game
 
 ### Inside inventory-
 A- use the first item
+
 B- use the second item
+
 C- use the third item
+
 etc.
